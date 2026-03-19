@@ -17,6 +17,11 @@ application {
     // Входная точка
     mainClass.set("hexlet.code.App")
 }
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
+}
 
 tasks.getByName("run", JavaExec::class) {
     standardInput = System.`in`
