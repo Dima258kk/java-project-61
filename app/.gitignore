@@ -14,7 +14,7 @@ gradlew.bat
 # Ignore Gradle build output directory
 build
 **/logs/
-
+gradle/
 .settings
 bin
 .project*
@@ -26,7 +26,7 @@ kls_database.db
 
 # Cache of project
 .gradletasknamecache
-
+.gitignore.swp
 .classpath
 .factorypath
 .settings
