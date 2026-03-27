@@ -20,6 +20,12 @@ application {
     mainClass.set("hexlet.code.App")
 }
 
-tasks.test {
-    useJUnitPlatform()
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
+}
+
+tasks.getByName("run", JavaExec::class) {
+    standardInput = System.`in`
 }
