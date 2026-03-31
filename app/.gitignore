@@ -1,14 +1,13 @@
-.gradle
+.gradle/
 **/build/
 !gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
 !**/src/main/**/build/
 !**/src/test/**/build/
 !**/src/**/build/
 
 # Ignore Gradle GUI config
 gradle-app.setting
-gradle-wrapper.properties
-gradlew
 gradlew.bat
 
 # Ignore Gradle build output directory
