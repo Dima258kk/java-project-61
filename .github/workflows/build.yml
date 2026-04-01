@@ -30,8 +30,16 @@ jobs:
           path: ~/.gradle/caches
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
           restore-keys: ${{ runner.os }}-gradle
-      - name: Build and analyze
+      - name: Build
         working-directory: ${{ github.workspace }}/app
+        run: ./gradlew build
+      - name: Sonarqube Scan
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./gradlew build sonar --info
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        run: |
+          ./gradlew sonar \
+            -Dsonar.projectKey=Dima258kk_java-project-61 \
+            -Dsonar.organization=dima258kk \
+            -Dsonar.host.url=https://sonarcloud.io
+        working-directory: app
