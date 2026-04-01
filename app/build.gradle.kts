@@ -8,6 +8,7 @@ sonar {
     properties {
         property("sonar.projectKey", "Dima258kk_java-project-61")
         property("sonar.organization", "dima258kk")
+        property("sonar.host.url", "https://sonarcloud.io")
     }
 }
 
