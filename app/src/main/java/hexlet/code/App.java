@@ -5,12 +5,23 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         System.out.println(
-                "Please enter the game number and press Enter.\n" + "1 - Greet\n" + "2 - Even\n" + "0 - Exit");
+                "Please enter the game number and press Enter.\n"
+                        + "1 - Greet\n"
+                        + "2 - Even\n"
+                        + "3 - Calc\n"
+                        + "0 - Exit");
         Scanner scannerChoice = new Scanner(System.in);
         int number = scannerChoice.nextInt();
         if (number == 2) {
+            System.out.println("Your choice: 2");
+            System.out.println("");
             System.out.println("Welcome to the Brain Games!");
             Game_even.even();
+        }
+        if (number == 3) {
+            System.out.println("Your choice: 3");
+            System.out.println("Welcome to the Brain Games!");
+            Calculator.calc();
         }
     }
 }

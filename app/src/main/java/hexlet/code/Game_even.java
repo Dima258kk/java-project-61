@@ -27,10 +27,14 @@ public class Game_even {
             if (correct) {
                 System.out.println("Correct!");
             } else {
-                String correctAnswer = predicateSumm(number) ? "yes": "no";
+                String correctAnswer = predicateSumm(number) ? "yes" : "no";
 
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
-                        + correctAnswer + "'.");
+                System.out.println(
+                        "'"
+                                + answer
+                                + "' is wrong answer ;(. Correct answer was '"
+                                + correctAnswer
+                                + "'.");
                 System.out.println("Let's try again, " + userName + "!");
                 scanner.close();
                 return;
